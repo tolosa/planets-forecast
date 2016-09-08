@@ -3,6 +3,8 @@ class Forecast < ApplicationRecord
   scope :days_count_by_forecast, -> { group(:forecast).count }
   scope :most_rainy_day, -> { all.max_by(&:precipitation) }
 
+  default_scope { order(:day) }
+
   def as_json(options)
     super only: %i[day forecast precipitation]
   end

@@ -5,6 +5,11 @@ class ForecastsController < ApplicationController
     render json: @forecast
   end
 
+  def index
+    @forecasts = Forecast.all
+    render json: @forecasts
+  end
+
   def statistics
     @counts = Forecast.days_count_by_forecast
     render json: @counts
