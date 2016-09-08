@@ -1,24 +1,23 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Imaginary planets forecast application, a developer evaluation for MercadoLibre.
 
-Things you may want to cover:
+## Endpoints
 
-* Ruby version
+The API is currently hosted in Heroku, at the base address of `https://planets-forecast.herokuapp.com`. All listed actions are standard, unauthenticated GET methods on a JSON API.
 
-* System dependencies
+### `/forecasts`
 
-* Configuration
+Gets a list of all calculated forecasts.
 
-* Database creation
+### `/forecasts/[day]`
 
-* Database initialization
+Gets forecast for a specific day number.
 
-* How to run the test suite
+### `/forecasts/statistics`
 
-* Services (job queues, cache servers, search engines, etc.)
+Gets a count of days for each forecast condition.
 
-* Deployment instructions
+### `/forecasts/most_rainy`
 
-* ...
+Gets the forecast for the day with more precipitation.
